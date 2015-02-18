@@ -1,0 +1,21 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.centerme{
+float:right;
+text-align: center; 
+width:700px;
+padding-right:80px; 
+padding-top:150px;
+}
+
+// #scootover{
+//   float:right;
+// }
+
+#topright{
+
+  position:absolute;
+  top:0;
+  right:0;
+}
