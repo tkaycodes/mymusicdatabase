@@ -1,6 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body{
+
+  font-family: 'Lato', sans-serif;
+}
+
+h2{
+  font-family: 'Lato', sans-serif;
+  font-weight:900;
+
+}
+
+// main text block on welcome page
 .centerme{
 float:right;
 text-align: center; 
@@ -9,13 +21,24 @@ padding-right:80px;
 padding-top:150px;
 }
 
-// #scootover{
-//   float:right;
-// }
-
+//login/logout block on welcome page
 #topright{
-
   position:absolute;
   top:0;
   right:0;
+}
+
+//all forms for devise
+.devise{
+position:absolute;
+top:50%;
+left:50%;
+height:400px;
+width:1200px;
+margin:-200px 0 0 -600px; //centering div in center of page formula (-1/2 of height,0,0,-1/2 of width)
+border-bottom: 250px;
+border-style: solid;
+border-color:#595F5B;
+
+
 }
