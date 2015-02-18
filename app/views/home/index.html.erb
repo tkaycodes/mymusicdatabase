@@ -1,6 +1,6 @@
 <!-- ################logo #################-->
 
-<%=image_tag 'itunes10.png'%>
+<%#=image_tag 'itunes10.png', id: "mylogo"%>
 
 
 <!-- ################welcome text #################-->
@@ -10,24 +10,24 @@
   <h4>created by Tabish Khan</h4><hr>
   <h5>My music database allows you to search through millions of songs
   and upload them to ur very own music library.<br> Get started now!</h5>
-  <%=link_to "Song Search", ""%>
+  <div class="btn"><%=link_to "Song Search", ""%></div>
 </div>
  
 
 <!-- ################ login/logou #################-->
 
-<div id="topright">
-  <% if user_signed_in? %>
-        Hi <%=current_user.name%>,
-        <%=link_to 'Logout', 
+<!-- <div id="topright">
+  <%# if user_signed_in? %>
+        Hi <%#=current_user.name%>,
+        <%#=link_to 'Logout', 
         destroy_user_session_path, 
         :method => :delete %>
-        <%else%> 
-        <%=link_to 'Login', 
+        <%#else%> 
+        <%#=link_to 'Login', 
         new_user_session_path%>
-        <%end%><br>
+        <%#end%><br>
 </div>
-      
+       -->
 
 <!-- ##############################################-->
 

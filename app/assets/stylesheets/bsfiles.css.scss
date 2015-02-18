@@ -1,32 +1,69 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body{
 
+
+//app wide ////////////////////////////////////////////
+
+//app fonts
+body{
   font-family: 'Lato', sans-serif;
 }
 
-h2{
+h1,h2{
   font-family: 'Lato', sans-serif;
   font-weight:900;
-
 }
 
-// main text block on welcome page
-.centerme{
-float:right;
-text-align: center; 
-width:700px;
-padding-right:80px; 
-padding-top:150px;
+//logo 
+#mylogo{
+width:60px;
+height:60px;
 }
 
-//login/logout block on welcome page
-#topright{
+//devise alerts
+.alert{
+  padding:0px
+}
+
+//login/logout app wide (RIGHT SIDE OF NAVBAR)
+#scootover{
   position:absolute;
   top:0;
   right:0;
 }
+
+///////////////////////////////////////////////////////
+
+
+
+
+// main text block on home page
+.centerme{
+position:absolute; //part of center forumla
+top:50%; //part of center formula
+left:50%; //part of center formula
+width:1200px;
+height:300px;
+margin:-150px 0 0 -600px;
+border-bottom: 250px;
+border-style: solid;
+border-color:#66CCFF;
+}
+
+.btn{
+border-style:solid;
+border-color:black;
+width:500px;
+height:auto;
+text-align: left;
+margin:0 auto;
+position:relative;
+float:center;
+
+}
+
+
 
 //all forms for devise
 .devise{
@@ -38,7 +75,7 @@ width:1200px;
 margin:-200px 0 0 -600px; //centering div in center of page formula (-1/2 of height,0,0,-1/2 of width)
 border-bottom: 250px;
 border-style: solid;
-border-color:#595F5B;
+border-color:#66CCFF;
 
 
 }
