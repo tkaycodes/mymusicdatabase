@@ -1,3 +1,5 @@
+<%=link_to "search for more", search_path %><br>
+
 <h2> My Database </h2>
 
 <%@songs.each do |mysong| %>
@@ -8,5 +10,6 @@
 <div id="songartist"><%=mysong.artist%></div>
 </div>
 <%end%>
+
 
 

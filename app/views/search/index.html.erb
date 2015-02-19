@@ -7,6 +7,10 @@
   </div>
  -->
 
+   <% if user_signed_in? %>
+    <%=link_to "My database", "/songs"%>
+    <%end%>
+
 <div class="container well">
   <%=form_tag url: submit_search_path, method: :post do%>
      <input type="text" class="searchbox" 
