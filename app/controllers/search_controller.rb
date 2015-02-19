@@ -1,19 +1,16 @@
 class SearchController < ApplicationController
 
 
-
-
-  def index
+  def index#searchform
   end
 
-  def create
-
-  @client = Rdio.client
-  @typeasong = params[:usersearch]
-  @result = Rdio.search(@typeasong)
-  # render plain: params
-  # render plain: params[:usersearch]
-  # render plain: @usersearch;
+  def create#displays results from api
+    @client = Rdio.client
+    @typeasong = params[:usersearch]
+    @result = Rdio.search(@typeasong)
+    # render plain: params
+    # render plain: params[:usersearch]
+    # render plain: @usersearch;
   end
   
 end

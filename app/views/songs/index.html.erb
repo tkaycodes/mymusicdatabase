@@ -1,0 +1,12 @@
+<h2> My Database </h2>
+
+<%@songs.each do |mysong| %>
+
+<div class="col-md-4">
+<%=image_tag mysong.artwork %><br>
+<div id="songname"><%=mysong.name%></div>
+<div id="songartist"><%=mysong.artist%></div>
+</div>
+<%end%>
+
+

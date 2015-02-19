@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/search', to:'search#index' 
   post '/search', to: 'search#create', as: 'submit_search'
 
+  get '/songs', to: 'songs#index'
+  post '/songs', to: 'songs#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
