@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
   
   get '/search', to:'search#index' 
-  post '/search', to: 'search#index', as: 'submit_search'
+  post '/search', to: 'search#create', as: 'submit_search'
 
 
 

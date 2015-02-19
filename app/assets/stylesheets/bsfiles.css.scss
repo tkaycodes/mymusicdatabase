@@ -9,9 +9,7 @@
 
 //app wide //////////////////////////////////////////////////////
 
-// body{
-// background: url('albumcovers.jpg') no-repeat;
-// }
+
 
 //app fonts
 body{
@@ -94,21 +92,69 @@ border-color:#66CCFF;
 //search box
 
 
-.searchdiv{
-  // padding:6px 15px 6px 30px;
-  position:absolute;
-  top:50%;
-  left:50%;
-  width:1200px;
-  height:100px;
-  margin:-50px 0 0 -600px;
-  border-style:solid;
-  border-color:black;
-}
+// .searchdiv{
+//   // padding:6px 15px 6px 30px;
+//   position:absolute;
+//   top:50%;
+//   left:50%;
+//   width:1200px;
+//   height:100px;
+//   margin:-50px 0 0 -600px;
+//   border-style:solid;
+//   border-color:black;
+// }
 
 .searchbox{
   width:1000px;
   height:30px;
   margin:10px auto auto 80px;
 }
+
+.well {
+  // background-color: rgba(355,555,800,0.1);
+  position: absolute;
+  top: 50%;
+  left:50%;
+  // padding: 15px;
+  // padding-top: 0px;
+  // padding-bottom: 5px;
+  width:1200px;
+  height:50px;
+  margin:-25px 0 0 -600px;
+
+
+}
+
+
+// .devise{
+// position:absolute;
+// top:50%;
+// left:50%;
+// height:400px;
+// width:1200px;
+// margin:-200px 0 0 -600px; //centering div in center of page formula (-1/2 of height,0,0,-1/2 of width)
+// border-bottom: 250px;
+// border-style: solid;
+// border-color:#66CCFF;
+
+// }
+
+
+
+//search display results page (/search, create) //////////////////////////////////////////////
+
+
+#songname{
+font-size: 15px;
+}
+
+#songartist{
+font-size: 10px;
+font-style: italic;
+}
+
+
+
+
+
 

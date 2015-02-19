@@ -1,16 +1,18 @@
-  <div class="container devise">
-  <form id="formsection" method: "post">
-  <p id="formmessage">Search for the name of a song:</p>
-  <input type="text" name="usersearch" required>
-  <input type="submit" value="Submit">
-  </form>
+<!--   <div class="container well">
+  <%#= form_tag url: submit_search_path, method: :post do %>
+    <p id="formmessage">Search for the name of a song:</p>
+    <input type="text" name="usersearch" required>
+    <input type="submit" value="Submit">
+  <%# end %>
   </div>
+ -->
 
-
-<!-- <form class="searchdiv" method:"post">
-  <span>
-  <input method = "post" type="text" class="searchbox" placeholder="Song Name" name="usersearch" required>
-  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-</span>
-</form> -->
+<div class="container well">
+  <%=form_tag url: submit_search_path, method: :post do%>
+     <input type="text" class="searchbox" 
+          placeholder="Song Search.." name="usersearch" required/>
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </span>
+  <%end%>
+</div>
 

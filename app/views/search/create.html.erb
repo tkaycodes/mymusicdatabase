@@ -1,0 +1,30 @@
+<%#=render plain: params[:usersearch]%>
+
+<h1>Results</h1>
+<%@result.each do |x|%>
+
+<div class="col-md-4">
+<%=image_tag x.artwork %><br>
+<div id="somename"><%=x.name%></div>
+<div id="songartist"><%=x.artist%></div>
+</div>
+
+<%end%>
+
+
+
+
+
+
+
+
+
+<!-- <div id=" <%#= dom_id(song)%> ">  -->
+<!--   <div class="col-md-6">
+    <div id="songname"><%#=song.name%><br></div>
+    <div id="songartist"><%#=song.artist%><br></div>
+    <%#=link_to "Add this Song to My Collection", song_url_with_params(song), method: :post%><br><hr>
+    <%#=link_to "Add this Song to My Collection", songs_path(song), method: :post%>
+  </div> -->
+     
+ <!-- </div>  -->
