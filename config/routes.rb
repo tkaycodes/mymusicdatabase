@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
   devise_for :users
   root 'home#index'
+  
+  get '/search', to:'search#index' 
+  post '/search', to: 'search#index', as: 'submit_search'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -7,7 +7,7 @@
 
 
 
-//app wide ////////////////////////////////////////////
+//app wide //////////////////////////////////////////////////////
 
 // body{
 // background: url('albumcovers.jpg') no-repeat;
@@ -29,10 +29,6 @@ width:60px;
 height:60px;
 }
 
-//devise alerts
-.alert{
-  padding:0px
-}
 
 //login/logout app wide (RIGHT SIDE OF NAVBAR)
 #scootover{
@@ -41,9 +37,8 @@ height:60px;
   right:0;
 }
 
-///////////////////////////////////////////////////////
 
-
+//home page ///////////////////////////////////////////////////////
 
 // main text block on home page
 .centerme{
@@ -71,7 +66,7 @@ float:center;
 
 }
 
-
+//devise ////////////////////////////////////////////////////////////
 
 //all forms for devise
 .devise{
@@ -85,5 +80,35 @@ border-bottom: 250px;
 border-style: solid;
 border-color:#66CCFF;
 
-
 }
+
+//devise alerts
+.alert{
+  padding:0px
+}
+
+
+
+//search page (/search) //////////////////////////////////////////////
+
+//search box
+
+
+.searchdiv{
+  // padding:6px 15px 6px 30px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:1200px;
+  height:100px;
+  margin:-50px 0 0 -600px;
+  border-style:solid;
+  border-color:black;
+}
+
+.searchbox{
+  width:1000px;
+  height:30px;
+  margin:10px auto auto 80px;
+}
+
