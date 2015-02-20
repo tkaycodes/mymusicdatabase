@@ -13,7 +13,10 @@ class SongsController < ApplicationController
     @songs=Song.all
   if @songs.exists?(name: params[:name],
                    artist: params[:artist],
-                   artwork: params[:artwork])
+                   artwork: params[:artwork],
+                   user_id: current_user.id)
+
+      # current_user.has_song_with_uid?(params[:uid])
   redirect_to search_path, notice: "Song already exists"
                     else
                      @song=Song.new(name:     params[:name],

@@ -10,12 +10,9 @@
 <!-- Google font-->
 <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
 
-<nav class="navbar navbar-default">
-<!-- <div class="container-fluid"> -->
-<%=image_tag 'itunes10.png', id: "mylogo"%>
-
-<ul class="nav navbar-nav navbar-right">
-  <li>
+<nav class="navbar navbar-inverse">
+<%=image_tag 'mmdb.png', id: "mylogo"%>&nbsp;&nbsp;&nbsp;
+  <span id="userauth">
   <% if user_signed_in? %>
         Hi <%=current_user.name%>,
         <%=link_to 'Logout', 
@@ -24,13 +21,9 @@
         <%else%> 
         <%=link_to 'Login', 
         new_user_session_path%>
-        <%end%></li>
-</ul>
-<!-- </div> -->
-
-
-</div>
+        <%end%></span>
 </nav>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%=  alert %></p>
 

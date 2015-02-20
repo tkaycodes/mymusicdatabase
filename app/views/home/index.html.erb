@@ -1,16 +1,32 @@
 <!-- ################welcome text #################-->
 
-<div class="homepagebackground">
-  <div class="container centerme">
-  <h1>Welcome to MMDB </h1>
-  <h4>created by Tabish Khan</h4><hr>
+
+<style>
+body {
+   background-image: url('assets/albumcovers.jpg');
+}
+</style>
+
+  <div class="container mainheader">
+  <h1 id="mainpagetext"> mymusicdatabase.  <%#=image_tag 'mmdb.png'%>
+ </h1>
+
+  <div class="btn homebutton"><%=link_to "Search Songs", "/search"%>
+  </div>
+  </div>
+<!--  <div class="container well">
+  <%#=form_tag url: submit_search_path, method: :post do%>
+     <input type="text" class="searchbox" 
+          placeholder="Song Search.." name="usersearch" required/>
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </span> -->
+  <%#end%>
+</div>
+
+<div class="container">
   <h5>My music database allows you to search through millions of songs
   and upload them to ur very own music library.<br> Get started now!</h5>
-  <div class="btn"><%=link_to "Click here to start Searching!", "/search"%></div>
-  </div>
 </div>
- 
-
 
 <!-- ##############################################-->
 

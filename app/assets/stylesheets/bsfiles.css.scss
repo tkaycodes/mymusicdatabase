@@ -9,10 +9,13 @@
 
 //app wide //////////////////////////////////////////////////////
 
-
+.navbar{
+background-color: #000000; opacity: 0.8; filter: alpha(opacity=50);
+border-radius: 0 !important;
+}
 
 //app fonts
-body{
+html{
   font-family: 'Lato', sans-serif;
 }
 
@@ -21,12 +24,33 @@ h1,h2{
   font-weight:900;
 }
 
+#mainpagetext{
+font-size:125px;
+
+}
+
+.homebutton{
+
+font-size:15px;
+font-style:bold;
+
+
+}
+.scrollable{
+
+ overflow: scroll;
+
+}
 //logo 
 #mylogo{
 width:60px;
 height:60px;
 }
 
+#userauth{
+
+  font-size:15px;
+}
 
 //login/logout app wide (RIGHT SIDE OF NAVBAR)
 #scootover{
@@ -39,7 +63,7 @@ height:60px;
 //home page ///////////////////////////////////////////////////////
 
 // main text block on home page
-.centerme{
+.mainheader{
 position:absolute; //part of center forumla
 top:50%; //part of center formula
 left:50%; //part of center formula
@@ -48,7 +72,9 @@ height:300px;
 margin:-150px 0 0 -600px;
 border-bottom: 100px;
 border-style: solid;
-border-color:#66CCFF;
+border-color:#B0B0B0 ;
+background-color: #000000; opacity: 0.9; filter: alpha(opacity=50);
+
 }
 
 .btn{
@@ -76,7 +102,8 @@ width:1200px;
 margin:-200px 0 0 -600px; //centering div in center of page formula (-1/2 of height,0,0,-1/2 of width)
 border-bottom: 250px;
 border-style: solid;
-border-color:#66CCFF;
+border-color:#B0B0B0 ;
+background-color: #000000; opacity: 0.9; filter: alpha(opacity=50);
 
 }
 
@@ -126,6 +153,9 @@ border-color:#66CCFF;
 }
 
 
+
+
+
 // .devise{
 // position:absolute;
 // top:50%;
@@ -153,7 +183,10 @@ font-size: 10px;
 font-style: italic;
 }
 
+.homepagebackground{
 
+
+}
 
 
 
