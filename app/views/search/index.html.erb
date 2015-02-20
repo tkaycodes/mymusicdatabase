@@ -1,22 +1,16 @@
-<!--   <div class="container well">
-  <%#= form_tag url: submit_search_path, method: :post do %>
-    <p id="formmessage">Search for the name of a song:</p>
-    <input type="text" name="usersearch" required>
-    <input type="submit" value="Submit">
-  <%# end %>
-  </div>
- -->
+<!--################### SEARCH API PAGE ###################-->
 
-   <% if user_signed_in? %>
-    <%=link_to "My database", "/songs"%>
-    <%end%>
+<% if user_signed_in? %>
+  <%=link_to "My database", "/songs"%>
+<%end%>
+
+<!--################### SEARCH BAR ###################-->
 
 <div class="container well">
   <%=form_tag url: submit_search_path, method: :post do%>
-     <input type="text" class="searchbox" 
-          placeholder="Song Search.." name="usersearch" required/>
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-    </span>
+      <input type="text" class="searchbox" placeholder="Song Search.." 
+      name="usersearch" required/>
+      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
   <%end%>
 </div>
 

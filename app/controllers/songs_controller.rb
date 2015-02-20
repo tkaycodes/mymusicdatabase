@@ -1,5 +1,7 @@
 class SongsController < ApplicationController
 
+  before_action :authenticate_user!, only: [:create]
+
   def index #will show all the added songs
    if user_signed_in? == true
     @songs=current_user.songs

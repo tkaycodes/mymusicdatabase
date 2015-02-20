@@ -7,7 +7,7 @@ module Rdio
 
   def self.search(text)
     response = Rdio.client.search(query: text, types: 'song')
-    response.results.map { |songfield| Song.new(songfield) }
+    response.results.map { |result| Song.new(result) }
   end
 
   class Song
@@ -29,3 +29,17 @@ module Rdio
 # def uid
 #   @uid
 # end
+
+#this is a class (song) within a class (Rdio), so the object thats created from this
+# is a Rdio::Song
+#check in rails c . 
+
+#anytime we say Rdio.client (client is a method that weve defined)
+#same for Rdio.search ( "randomshithere")
+#it will take "randomshithere" to search database
+#then it will take the results it gets from there and turn them all to 
+#song objects, song(resultfromapi)
+#it gives song three attributes 
+#Song.name which is  -  resultfromapi.name
+#Song.artist which is   resultfromapi.artist
+#Song.artwork which is  resultfromapi.icond400 

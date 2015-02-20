@@ -11,7 +11,8 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
 
 <nav class="navbar navbar-inverse">
-<%=image_tag 'mmdb.png', id: "mylogo"%>&nbsp;&nbsp;&nbsp;
+<%#=image_tag 'mmdb.png', id: "mylogo"%>&nbsp;&nbsp;&nbsp;
+<span id="navbarname">mymusicdatabase.</span>
   <span id="userauth">
   <% if user_signed_in? %>
         Hi <%=current_user.name%>,

@@ -1,17 +1,23 @@
-<!-- ################welcome text #################-->
+<!-- home page -->
 
 
+<!-- background image -->
 <style>
-body {
-   background-image: url('assets/albumcovers.jpg');
-}
+body
+{ background-image: url('assets/albumcovers.jpg');}
 </style>
 
-  <div class="container mainheader">
-  <h1 id="mainpagetext"> mymusicdatabase.  <%#=image_tag 'mmdb.png'%>
- </h1>
+
+<!-- main header block -->
+
+<div class="container mainheader">
+  <h1 id="mainpagetext"> mymusicdatabase.<%#=image_tag 'mmdb.png'%></h1>
 
   <div class="btn homebutton"><%=link_to "Search Songs", "/search"%>
+  </div>
+  </div>
+
+  <div class="btn homebutton"><%=link_to "Login", "/search"%>
   </div>
   </div>
 <!--  <div class="container well">
