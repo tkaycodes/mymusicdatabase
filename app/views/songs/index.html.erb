@@ -17,19 +17,8 @@
   <!-- <form> <input type="number" name="quantity" min="1" max="5">
   <input type="submit" method:"patch"></form> -->
 
-
-
-  <!-- <div class="container well">
-    <%#=form_tag url: submit_search_path, method: :post do%>
-        <input type="text" class="searchbox" placeholder="Song Search.." 
-        name="usersearch" required/>
-        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-    <%#end%>
-  </div> -->
-
-
   <%=form_for :song, url: rate_songs_path(mysong), method: :patch do |f| %>
-  <%= f.number_field :rating %>
+  <%= f.number_field :rating, max:5 %>
   <%= f.submit "submit" %>
   <%end%> 
 

@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   post '/songs', to: 'songs#create', as: 'add_to_my_songs'
   patch '/songs/:id', to: 'songs#update', as: 'rate_songs'
 
+
+  #remember to include id in patch/delete routes!!!!
+
   # resources: songs
   # collection, do
   #   'search'
