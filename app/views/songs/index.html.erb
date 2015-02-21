@@ -9,6 +9,8 @@
 
 <%@songs.each do |mysong| %>
 
+
+
   <div class="col-md-4">
   <%=image_tag mysong.artwork %><br>
   <div id="songname"><%=mysong.name%></div>
@@ -20,10 +22,19 @@
   <%=form_for :song, url: rate_songs_path(mysong), method: :patch do |f| %>
   <%= f.number_field :rating, max:5 %>
   <%= f.submit "submit" %>
-  <%end%> 
 
 
-  MY RATING:<%=mysong.rating%>
+  MY RATING:<%=mysong.rating%><br>
+
+
+
+  <%=link_to "Remove form my collection", delete_songs_path(mysong), method: :delete, data:{confirm: "are you sure?"} %>
+
+    <%end%> 
+
+
+
+ 
 
 
   </div>
