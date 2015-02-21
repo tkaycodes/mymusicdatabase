@@ -4,8 +4,7 @@
 
     def index #will show all the added songs
       if user_signed_in? == true
-        @songs=current_user.songs
-        #@songs.order(rating: :desc)
+        @songs=current_user.songs.order(rating: :desc)
         else
         redirect_to root_path
       end

@@ -20,7 +20,7 @@
   <input type="submit" method:"patch"></form> -->
 
   <%=form_for :song, url: rate_songs_path(mysong), method: :patch do |f| %>
-  <%= f.number_field :rating, max:5 %>
+  <%= f.number_field :rating, min:0, max:5 %>
   <%= f.submit "submit" %>
 
 
