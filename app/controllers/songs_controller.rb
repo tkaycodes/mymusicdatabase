@@ -11,31 +11,41 @@ class SongsController < ApplicationController
   end
 
   def create # will add new songs to my database
-
     @songs=Song.all
-  if @songs.exists?(name: params[:name],
-                   artist: params[:artist],
-                   artwork: params[:artwork],
-                   user_id: current_user.id)
+    if @songs.exists?(name: params[:name],
+                     artist: params[:artist],
+                     artwork: params[:artwork],
+                     user_id: current_user.id)
 
-      # current_user.has_song_with_uid?(params[:uid])
-  redirect_to search_path, notice: "Song already exists"
-                    else
-                     @song=Song.new(name:     params[:name],
-                                    artist:   params[:artist],
-                                    artwork:  params[:artwork])
-                    @song.user=current_user
-                    if @song.save
-                    redirect_to add_to_my_songs_path, notice: "song added"
-                    else 
-                    redirect_to search_path, notice: "something went wrong"
-                    end
+        # current_user.has_song_with_uid?(params[:uid])
+    redirect_to search_path, notice: "Song already exists"
+                      else
+                       @song=Song.new(name:     params[:name],
+                                      artist:   params[:artist],
+                                      artwork:  params[:artwork])
+                      @song.user=current_user
 
+                      if @song.save
+                      redirect_to add_to_my_songs_path, notice: "song added"
+                      else 
+                      redirect_to search_path, notice: "something went wrong"
+                      end
+
+
+    end
   end
-end
 
-    
- 
+
+
+  def update
+    @song=Song.find(params[:id])
+    @song.rating = params[:song][:rating].to_i
+    if @song.save
+      redirect_to songs_path, notice: "rating saved!"
+    else
+      redirect_to songs_path, notice: "song could not be saved!"
+    end
+  end
 
 
 end

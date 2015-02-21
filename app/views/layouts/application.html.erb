@@ -23,6 +23,9 @@
         <%=link_to 'Login', 
         new_user_session_path%>
         <%end%></span>
+        <% if user_signed_in? %>
+  <%=link_to "My database", "/songs"%>
+<%end%>
 </nav>
 
 <p class="notice"><%= notice %></p>

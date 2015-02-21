@@ -8,8 +8,15 @@ Rails.application.routes.draw do
 
   get '/songs', to: 'songs#index'
   post '/songs', to: 'songs#create', as: 'add_to_my_songs'
+  patch '/songs/:id', to: 'songs#update', as: 'rate_songs'
 
-  resources :ratings
+  # resources: songs
+  # collection, do
+  #   'search'
+  # end
+  
+
+  # resources :ratings
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

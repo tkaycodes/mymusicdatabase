@@ -33,6 +33,8 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'rdio_api', git: "git@github.com:anilv/rdio_api.git"
 
 
+# gem 'searchkick'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
