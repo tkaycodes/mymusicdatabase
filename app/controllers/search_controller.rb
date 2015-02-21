@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
 
-  def index#searchform
+  def index#searchform (search box only)
   end
 
   def create#displays results from api

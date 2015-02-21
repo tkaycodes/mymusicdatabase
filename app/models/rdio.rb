@@ -11,13 +11,15 @@ module Rdio
   end
 
   class Song
-    attr_reader :name, :artist, :artwork, :uid
+    attr_reader :name, :artist, :artwork, :album, :songid
 
     def initialize(result)
-      @uid = result.key
+      @artistid = result.artistKey
+      @albumid = result.albumKey
       @name =   result.name
       @artist = result.artist
       @artwork = result.icon400
+      @album = result.album
     end
 
   end
