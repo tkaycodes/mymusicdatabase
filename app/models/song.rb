@@ -4,15 +4,25 @@ class Song < ActiveRecord::Base
 
    # Song.order(rating: :desc);
 
+
+
+
+
   def self.search(name)
   if name
     self.where("name iLIKE ?", "%#{name}%")
+    # link_to "My database", "/songs"
     else
      self.all
-     render "sdslfja";
+     #render "sdslfja";
     # redirect_to 
   end
+
 end
+
+
+
+
 
 
 end

@@ -11,10 +11,6 @@
         @songs=current_user.songs.order(rating: :desc)
           
         @songs = @songs.search(params[:searchmydb])  if params[:searchmydb].present?
-        # @songs.find(:all, :conditions => ['name LIKE ?', "%#{params[:searchmydb]}%"])
-        # @songs.where(name:params[:searchmydb]);
-          
-
 
         else
         redirect_to root_path

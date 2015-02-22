@@ -1,10 +1,12 @@
-<%=link_to "search for more", search_path %><br>
+<span>
+  <%=link_to "search for more", search_path %><span>
 <hr>
-  <%=form_tag("/songs", method: "get") do %>
+  <span><%=form_tag("/songs", method: "get") do %>
   <%=label_tag(:searchmydb, "Search my collection:") %>
   <%=text_field_tag(:searchmydb) %>
   <%=submit_tag("Search") %>
-  <%end%> 
+  <%end%></span>
+<hr>
 
 <%#=form_for :song do |f|%>
 <%#=f.text_field :search %>
@@ -23,7 +25,9 @@
 <%#=submit_tag "Search", name: nil, class="btn btn-default"%>
 <%#end%>
 
-<h2> My Database </h2>
+<div class="container">
+<h2> <%=current_user.name%>'s Database </h2>
+</div>
 
 <%@songs.each do |mysong| %>
   <div class="col-md-4">

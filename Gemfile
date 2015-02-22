@@ -32,6 +32,8 @@ gem 'bootstrap-sass', '~> 3.3.3'
 
 gem 'rdio_api', git: "git@github.com:anilv/rdio_api.git"
 
+gem 'ratyrate'
+
 
 # gem 'searchkick'
 
