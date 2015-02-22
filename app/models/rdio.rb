@@ -5,10 +5,15 @@ module Rdio
                             consumer_secret: "yx5VGpBx4B") 
   end
 
+
+
   def self.search(text)
     response = Rdio.client.search(query: text, types: 'song')
     response.results.map { |result| Song.new(result) }
   end
+
+
+  
 
   class Song
     attr_reader :name, :artist, :artwork, :album, :songid 

@@ -1,4 +1,22 @@
 <%=link_to "search for more", search_path %><br>
+<hr>
+  <%=form_tag("/songs", method: "get") do %>
+  <%=label_tag(:searchmydb, "Search my collection:") %>
+  <%=text_field_tag(:searchmydb) %>
+  <%=submit_tag("Search") %>
+  <%end%> 
+
+<%#=form_for :song do |f|%>
+<%#=f.text_field :search %>
+
+<%#end%>
+
+<%#= form_for @article, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%#= f.text_field :title %>
+  <%#= f.text_area :body, size: "60x12" %>
+  <%#= f.submit "Create" %>
+<%# end %>
+
 
 <%#=form_tag search_songs_path, method: :get, role: "search" do%>
 <%#=text_field_tag :search, params[:search], class="form-control"%>
@@ -8,35 +26,19 @@
 <h2> My Database </h2>
 
 <%@songs.each do |mysong| %>
-
-
-
   <div class="col-md-4">
-  <%=image_tag mysong.artwork %><br>
-  <div id="songname"><%=mysong.name%></div>
-  <div id="songartist"><%=mysong.artist%></div>
+    <%=image_tag mysong.artwork %><br>
+    <div id="songname"><%=mysong.name%></div>
+    <div id="songartist"><%=mysong.artist%></div>
 
-  <!-- <form> <input type="number" name="quantity" min="1" max="5">
-  <input type="submit" method:"patch"></form> -->
-
-  <%=form_for :song, url: rate_songs_path(mysong), method: :patch do |f| %>
-  <%= f.number_field :rating, min:0, max:5 %>
-  <%= f.submit "submit" %>
-
-
-  MY RATING:<%=mysong.rating%><br>
-
-
-
-  <%=link_to "Remove form my collection", delete_songs_path(mysong), method: :delete, data:{confirm: "are you sure?"} %>
-
+    <%=form_for :song, url: rate_songs_path(mysong), method: :patch do |f| %>
+    <%= f.number_field :rating, min:0, max:5 %>
+    <%= f.submit "submit" %>
     <%end%> 
 
-
-
- 
-
-
+    MY RATING:<%=mysong.rating%><br>
+    <%=link_to "Remove from my collection", delete_songs_path(mysong), 
+    method: :delete, data:{confirm: "are you sure?"} %>
   </div>
 <%end%>
 
