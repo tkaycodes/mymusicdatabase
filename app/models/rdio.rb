@@ -1,8 +1,8 @@
 module Rdio
   
   def self.client
-    @client ||= RdioApi.new(consumer_key: "49hav4bae3jttacpk3vmtu42",
-                            consumer_secret: "yx5VGpBx4B") 
+    @client ||= RdioApi.new(consumer_key: Rails.application.secrets.rdio_key,
+                            consumer_secret: Rails.application.secrets.rdio_secret) 
   end
 
 
@@ -16,18 +16,19 @@ module Rdio
   
 
   class Song
-    attr_reader :name, :artist, :artwork, :album, :songid 
-
-    # :uid
+    attr_reader :name, :artist, :artwork, :album, :uid
 
     def initialize(result)
-      @artistid = result.artistKey
-      @albumid = result.albumKey
       @name =   result.name
       @artist = result.artist
       @artwork = result.icon400
+      ######other attrs
       @album = result.album
-      # @uid = result.key
+      ### stat attr
+      @artistid = result.artistKey
+      @albumid = result.albumKey
+
+      @uid = result.to_hash['key']
     end
 
   end

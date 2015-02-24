@@ -4,7 +4,7 @@ class Song < ActiveRecord::Base
 
    # Song.order(rating: :desc);
 
-
+  ratyrate_rateable "rating"
 
 
 

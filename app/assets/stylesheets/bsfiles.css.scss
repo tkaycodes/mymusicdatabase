@@ -9,10 +9,48 @@
 
 //app wide //////////////////////////////////////////////////////
 
+
+#mainpagetho{
+  background-image: url('albumcovers.jpg');
+  width:100%;
+  height:100vh;
+
+}
+
+#mainpage2{
+  background-color: #162955;
+  width:100%;
+  height:400px;
+}
+
+#mainpage3{
+  background-color:black;
+  width:100%;
+  height:100px;
+}
+
+#heading2{
+color:white;
+font-size:50px;
+}
+
+#heading3{
+color:white;
+
+}
+.inlinedivs{
+
+  display:inline-block;
+}
+
+.inlinedivs2{
+  float:right;
+}
 .navbar{
 // background-color: #000000; opacity: 0.8; filter: alpha(opacity=50);
 border-radius: 0 !important;
 background-color:#000000;
+margin-bottom:0px;
 }
 
 #navbarname{

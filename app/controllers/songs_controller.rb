@@ -2,24 +2,15 @@
 
     before_action :authenticate_user!, only: [:create]
 
-
-
-
-
     def index #will show all the added songs
-        if user_signed_in? == true
-        @songs=current_user.songs.order(rating: :desc)
-          
+      if user_signed_in? == true
+        @songs=current_user.songs.order(rating: :desc)          
         @songs = @songs.search(params[:searchmydb])  if params[:searchmydb].present?
-
-        else
+        render params[:listing] ? "listing" : "index"
+      else
         redirect_to root_path
-        end
-
+      end
     end
-
-
-
 
 
     def create # will add new songs to my database
@@ -50,6 +41,7 @@
     def update
       @song=Song.find(params[:id])
       @song.rating = params[:song][:rating].to_i
+
       if @song.save
         redirect_to songs_path, notice: "rating saved!"
       else
