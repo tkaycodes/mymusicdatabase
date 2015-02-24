@@ -1,5 +1,13 @@
 <!-- API SEARCH RESULTS PAGE (DISPLAY RESULTS AS RDIO::SONG OBJECTS) -->
 
+
+<!-- background image -->
+<style>
+body
+{ background-color:#162955;
+}
+</style>
+
 <%#=render plain: params[:usersearch]%>
 <%=link_to "Go back home", root_path%>
 <h1>Results</h1>
@@ -9,15 +17,17 @@
 
 <!-- all api results(rdio::song objects) -->
 
+
+
 <%if @result.present? %>
   <%@result.each do |x|%>
 
       <div class="col-md-4">
       <%=image_tag x.artwork %><br>
-      <div id="somename"><%=x.name%></div>
+      <div id="songname"><%=x.name%></div>
       <div id="songartist"><%=x.artist%></div>
-       off the album:<%=x.album%><br> 
-       <%=x.uid%>
+       <div id="songalbum">off the album:<%=x.album%></div><br> 
+       <div id="songkey"><%=x.uid%></div>
       <%#=x.songid%>
       <%#=x.songid%>
       <!-- convert song to SONG model object -->
