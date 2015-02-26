@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users,
+    controllers: {omniauth_callbacks:"users/omniauth_callbacks"}
   root 'home#index'
   
   get '/search', to:'search#index' 
@@ -8,7 +9,23 @@ Rails.application.routes.draw do
 
   get '/songs', to: 'songs#index'
   post '/songs', to: 'songs#create', as: 'add_to_my_songs'
+  patch '/songs/:id', to: 'songs#update', as: 'rate_songs'
 
+  delete '/songs/:id', to: 'songs#destroy', as:'delete_songs'
+
+  post '/rate' => 'rater#create', :as => 'rate'
+
+
+
+  #remember to include id in patch/delete routes!!!!
+
+  # resources: songs
+  # collection, do
+  #   'search'
+  # end
+  
+
+  # resources :ratings
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

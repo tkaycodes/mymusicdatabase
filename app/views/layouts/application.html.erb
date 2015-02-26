@@ -2,37 +2,40 @@
 <html>
 <head>
   <title>Mmdb</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 
 
 <!-- Google font-->
 <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
 
-<nav class="navbar navbar-default">
-<!-- <div class="container-fluid"> -->
-<%=image_tag 'itunes10.png', id: "mylogo"%>
+<!--Font Awesome (icons) -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-<ul class="nav navbar-nav navbar-right">
-  <li>
+<nav class="navbar navbar-inverse">
+<!-- <%#=image_tag 'mmdb.png', id: "mylogo"%>&nbsp;&nbsp;&nbsp; -->
+  <span id="navbarname">mymusicdatabase.</span>
+  <span id="userauth">
   <% if user_signed_in? %>
-        Hi <%=current_user.name%>,
-        <%=link_to 'Logout', 
-        destroy_user_session_path, 
-        :method => :delete %>
+      Hi <%=current_user.name%>,
+      <%=link_to "My database", "/songs"%>
+      <%=link_to 'Logout',destroy_user_session_path,:method =>:delete %>
         <%else%> 
-        <%=link_to 'Login', 
-        new_user_session_path%>
-        <%end%></li>
-</ul>
-<!-- </div> -->
+          <span class="loginstuff">
+          <i class="fa fa-user fa-2x"></i>
+          <%=link_to 'LOGIN',new_user_session_path%>
+          <%=link_to 'twitter login',user_omniauth_authorize_path(provider: :twitter)%>
+          </span>
+  <%end%>
 
-
-</div>
-</nav>
+  <%=link_to "top songs", ""%>
+  <%=link_to "top artists", ""%>
+  <%=link_to "top albums", ""%>
+  
 <p class="notice"><%= notice %></p>
 <p class="alert"><%=  alert %></p>
+</nav>
 
 </head>
 <body>

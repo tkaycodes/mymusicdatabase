@@ -1,22 +1,107 @@
-<!--   <div class="container well">
-  <%#= form_tag url: submit_search_path, method: :post do %>
-    <p id="formmessage">Search for the name of a song:</p>
-    <input type="text" name="usersearch" required>
-    <input type="submit" value="Submit">
-  <%# end %>
-  </div>
- -->
+<!--################### SEARCH API PAGE ###################-->
 
-   <% if user_signed_in? %>
-    <%=link_to "My database", "/songs"%>
-    <%end%>
+<% if user_signed_in? %>
+  <%=link_to "My database", "/songs"%>
+<%end%>
 
-<div class="container well">
-  <%=form_tag url: submit_search_path, method: :post do%>
-     <input type="text" class="searchbox" 
-          placeholder="Song Search.." name="usersearch" required/>
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-    </span>
-  <%end%>
+<!--################### SEARCH BAR ###################-->
+
+<!-- <div id="searchpagemaindiv"> -->
+<!-- <div class="searchdiv"> -->
+  <!-- <div class="container well"> -->
+
+
+
+
+
+  <%#=form_tag url: submit_search_path, method: :post do%>
+  <!--   <div id="searchstuff"> 
+     <input type="text" class="searchbox" placeholder="Song Search.." 
+     name="usersearch" required/> 
+     <i class="fa fa-search fa-2x"></i>
+     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+     </span> -->
+      <%#end%>
+
+
+<style>
+body
+{ background-color:black;
+}
+</style>
+
+
+
+
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div> -->
+
+
+<!-- <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+  <input class="form-control" type="password" placeholder="Password">
 </div>
 
+ -->
+  <!-- <div id="searchpagemaindiv">  -->
+
+
+  <!-- <div id="searchimage"></div> -->
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4 center" id="searchtext">
+    SEARCH ENGINE
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>
+
+
+    <%= form_tag url: submit_search_path, method: :post do %>
+    <div class="input-group">
+      <input type="text" name="usersearch" class="form-control" 
+      placeholder="Song Search..." 
+      aria-describedby="basic-addon2" required/>
+        <span class="input-group-addon">
+          <i class="fa fa-search fa-2x">
+          </i>
+        </span>
+    </div>
+<%end%>
+
+    <!-- <div id="searchimage2"></div> -->
+      <div id="onlyheadphones"></div>
+          <div class="row">
+            <div id="options">
+              <div class="center">
+              <div class="col-md-4">
+                
+              </div>
+              <div class="col-md-4">
+                <%=link_to "my database", "" %>
+                |
+                <%=link_to "homepage", root_path %>
+                |
+                <%=link_to "third link", "" %>
+              </div>
+              <div class="col-md-4">
+                
+              </div>         
+            </div>
+          </div>
+        </div>
+
+
+<!-- </div> -->
+
+
+ <%#=form_tag url: submit_search_path, method: :post do%>
+<!--     <div id="searchstuff"> 
+     <input type="text" class="searchbox" placeholder="Song Search.." 
+     name="usersearch" required/> 
+     <i class="fa fa-search fa-2x"></i>
+     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+     </span> -->
+      <%#end%>

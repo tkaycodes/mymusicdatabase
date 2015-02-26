@@ -10,9 +10,73 @@
 //app wide //////////////////////////////////////////////////////
 
 
+#mainpagetho{
+  background-image: url('albumcovers.jpg');
+  width:100%;
+  height:100vh;
+
+}
+
+#mainpage2{
+  background-color: #162955;
+  width:100%;
+  height:300px;
+}
+
+#mainpage3{
+  background-color:black;
+  width:100%;
+  height:100px;
+}
+
+#heading2{
+color:white;
+font-size:50px;
+}
+
+#heading3{
+color:white;
+
+}
+
+.fa{
+  margin-top:30px;
+  color:white;
+}
+
+.fa-flag{
+  color:white;
+}
+
+.inlinedivs{
+
+  display:inline-block;
+}
+
+.inlinedivs2{
+  float:right;
+}
+.navbar{
+// background-color: #000000; opacity: 0.8; filter: alpha(opacity=50);
+border-radius: 0 !important;
+background-color:#000000;
+margin-bottom:0px;
+}
+
+#navbarname{
+font-weight:900;
+font-size:40px;
+color:#162955;
+border-color:gray;
+border-style:solid;
+}
+
+#backgroundimage{
+  width:100%;
+}
 
 //app fonts
-body{
+html{
   font-family: 'Lato', sans-serif;
 }
 
@@ -21,10 +85,38 @@ h1,h2{
   font-weight:900;
 }
 
+#mainpagetext{
+font-size:125px;
+font-weight:900;
+width:1100px;
+// color:#031338
+color:white;
+}
+
+#homebutton{
+
+font-size:15px;
+// font-style:bold;
+color:white;
+border-color:white;
+border-style:solid;
+
+
+
+}
+
 //logo 
 #mylogo{
 width:60px;
 height:60px;
+}
+
+#userauth{
+
+  font-size:17px;
+  float:right;
+  height:48px;
+
 }
 
 
@@ -39,16 +131,24 @@ height:60px;
 //home page ///////////////////////////////////////////////////////
 
 // main text block on home page
-.centerme{
+.mainheader{
 position:absolute; //part of center forumla
 top:50%; //part of center formula
 left:50%; //part of center formula
-width:1200px;
+// width:1200px;
+width:1400px;
 height:300px;
-margin:-150px 0 0 -600px;
-border-bottom: 100px;
+// margin:-150px 0 0 -600px;
+margin:-150px 0 0 -700px;
+border-bottom: 60px;
+border-top:60px;
+border-left:0px;
+border-right:0px;
 border-style: solid;
-border-color:#66CCFF;
+border-color:#162955 ;
+background-color: #000000; opacity: 0.9; filter: alpha(opacity=50);
+
+
 }
 
 .btn{
@@ -76,7 +176,8 @@ width:1200px;
 margin:-200px 0 0 -600px; //centering div in center of page formula (-1/2 of height,0,0,-1/2 of width)
 border-bottom: 250px;
 border-style: solid;
-border-color:#66CCFF;
+border-color:#B0B0B0 ;
+background-color: #000000; opacity: 0.9; filter: alpha(opacity=50);
 
 }
 
@@ -84,6 +185,80 @@ border-color:#66CCFF;
 .alert{
   padding:0px
 }
+
+ #searchpagemaindiv{
+   height:100vh;
+   width:100%;
+   background-color:black;
+  // background-image: url('music-notes.jpg');
+  // background-image: url('headphones_resized.jpg');
+
+ }
+
+#searchimage{
+  background-image: url('mmdb.png');
+  width:350px;
+  height:350px;
+  top:8%;
+  left:40%;
+  position:absolute;
+
+}
+
+#onlyheadphones{
+  background-image: url('only-headphones.jpg');
+  // float:right;
+  top:40%;
+  width:640px;
+  height:700px;
+  float:right;
+  border-bottom: 100px;
+}
+
+#searchtext{
+width:800px;
+height:200px;
+color:#B0B0B0;  
+font-size:75px;
+font-family: 'Lato', sans-serif;
+font-weight:900;
+position:absolute;
+margin-left: 520px;
+margin-top:150px;
+
+}
+
+#searchimage2{
+  background-image: url('mmdb_2.png');
+  width:350px;
+  height:350px;
+  top:50%;
+  left:40%;
+  position:absolute;
+
+}
+
+
+
+#options{
+
+  width:1000px;
+  height:30px;
+  // background-color:white;
+  top:55%;
+  left:20%;
+  position:absolute;
+
+}
+// .searchdiv{
+// background-color:blue;
+// height:400px;
+// width:1400px;
+// position:absolute;
+// top:50%;
+// left:50%;
+// margin:-200px 0 0 -700px;
+// }
 
 
 
@@ -104,11 +279,76 @@ border-color:#66CCFF;
 //   border-color:black;
 // }
 
-.searchbox{
-  width:1000px;
-  height:30px;
-  margin:10px auto auto 80px;
+// .searchbox{
+//   width:1000px;
+//   height:50px;
+//   // margin:10px auto auto 80px;
+//   margin:-25px 0 0 -500px;
+//   position:absolute;
+//   top:50%;
+//   left:50%;
+//   border-style:solid;
+//   background: url('star.png') no-repeat scroll 7px 7px;
+//   padding-right:30px;
+
+
+
+// }
+
+// #searchstuff{
+//   height:100px;
+//   width:1200px;
+//   border-style:solid;
+//   position:absolute;
+//   margin:-50px 0 0 -600px;
+//   top:50%;
+//   left:50%; 
+//   // background-color:black;
+// }
+
+
+.input-group{
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+    width:1000px; 
+
 }
+
+.fa-search{
+  color:black;
+  margin-top: 0px;
+  font-size: 100%;
+  // padding-bottom:10px;
+  // height:90px;
+  // position:relative;
+  // float:right;
+  // margin-right:40px;
+  // margin-bottom:20px;
+  // margin-top:20px;
+  // border-style:solid;
+  // border:50px 50px 50px 50px;
+  // padding:10px 10px 10px 10px;
+}
+
+.searchbox2{
+  height:109px;
+  // font-size:40px;
+}
+
+.form-control{
+  height:59px;
+  // width:1000px;
+  font-size:25px;
+}
+
+
+
 
 .well {
   // background-color: rgba(355,555,800,0.1);
@@ -124,6 +364,8 @@ border-color:#66CCFF;
 
 
 }
+
+
 
 
 // .devise{
@@ -146,12 +388,44 @@ border-color:#66CCFF;
 
 #songname{
 font-size: 15px;
+color:white;
+font-style:bold;
 }
 
 #songartist{
 font-size: 10px;
 font-style: italic;
+color:white;
 }
+
+#songalbum{
+color:white;
+
+}
+
+#songkey{
+color:white;
+
+}
+
+.homepagebackground{
+
+
+}
+
+.input-group-addon {
+  width:120px;
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+
+
+
 
 
 
