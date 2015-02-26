@@ -8,4 +8,13 @@ class User < ActiveRecord::Base
 
   ratyrate_rater
 
+  def rating_for_song(song)
+    rating_for_song = ratings_given.where(rateable_type: 'Song', rateable_id: song.id).first
+
+    if rating_for_song.present?
+      rating_for_song.stars
+    else
+      0.0
+    end
+  end
 end

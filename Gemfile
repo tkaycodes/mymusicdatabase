@@ -27,6 +27,7 @@ gem 'devise'
 gem 'hirb'
 gem 'awesome_print'
 gem 'interactive_editor'
+gem 'omniauth-twitter'
 
 gem 'bootstrap-sass', '~> 3.3.3'
 

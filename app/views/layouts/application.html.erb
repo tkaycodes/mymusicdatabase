@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Mmdb</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 
 
@@ -30,6 +30,11 @@
         <%end%>
         <% if user_signed_in? %>
   <%=link_to "My database", "/songs"%>
+
+  <%=link_to "top songs", ""%>
+  <%=link_to "top artists", ""%>
+  <%=link_to "top albums", ""%>
+  
 <p class="notice"><%= notice %></p>
 <p class="alert"><%=  alert %></p>
 <%end%>
