@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  post '/rate' => 'rater#create', :as => 'rate'
-  devise_for :users
+  devise_for :users,
+    controllers: {omniauth_callbacks:"users/omniauth_callbacks"}
   root 'home#index'
   
   get '/search', to:'search#index' 
@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   patch '/songs/:id', to: 'songs#update', as: 'rate_songs'
 
   delete '/songs/:id', to: 'songs#destroy', as:'delete_songs'
+
+  post '/rate' => 'rater#create', :as => 'rate'
+
 
 
   #remember to include id in patch/delete routes!!!!
