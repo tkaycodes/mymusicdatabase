@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   serialize :twitter_omniauth_data
 
+  serialize :facebook_omniauth_data
+
   def email_required?
     false
   end
@@ -30,6 +32,20 @@ class User < ActiveRecord::Base
     user
   end
 
+  def self.find_or_create_from_facebook(facebook_omniauth_data)
+    user=User.where(provider: :facebook, uid:facebook_omniauth_data["uid"]).first
+    unless User
+      user=User.create(provider: :facebook, 
+                      uid: facebook_omniauth_data["uid"],
+                      email: facebook_omniauth_data["info"]["email"],
+                      name: facebook_omniauth_data["info"]["name"],
+                      facebook_credentials_token: facebook_omniauth_data["credentials"]["token"],
+                      facebook_credentials_expires_at: facebook_omniauth_data["credentials"]["expires_at"],
+                      omniauth_raw_data: facebook_omniauth_data)
+     end
+    user
+  end
+
         
 
   ratyrate_rater
@@ -43,4 +59,8 @@ class User < ActiveRecord::Base
       0.0
     end
   end
+
+
+
+
 end

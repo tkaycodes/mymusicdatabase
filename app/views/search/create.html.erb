@@ -28,8 +28,11 @@ body
       <%=image_tag x.artwork %><br>
       <div id="songname"><%=x.name%></div>
       <div id="songartist"><%=x.artist%></div>
-       <div id="songalbum">off the album:<%=x.album%></div><br> 
-       <div id="songkey"><%=x.uid%></div>
+      <div id="otherinfo">Other info:"</div>
+       <div id="songalbum">albumname:<%=x.album%></div>
+       <div id="songid">Songid:<%=x.uid%></div>
+       <div id="artistid">artistid:<%=x.artistid%></div>
+       <div id="albumid">albumid:<%=x.albumid%></div>
       <%#=x.songid%>
       <%#=x.songid%>
       <!-- convert song to SONG model object -->
