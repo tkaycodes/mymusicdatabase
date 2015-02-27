@@ -1,7 +1,7 @@
 class AddMoreAttr2Songs < ActiveRecord::Migration
   def change
-     column :songs, :songid, :string
-     add_column :songs, :songalbum, :string
-
+     add_column    :songs, :songalbum, :string
+     add_column    :songs, :artistid, :string
+     add_column    :songs, :albumid, :string
   end
 end
