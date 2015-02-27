@@ -117,14 +117,6 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     oauth (0.4.7)
-<<<<<<< HEAD
-    omniauth (1.2.2)
-      hashie (>= 1.2, < 4)
-      rack (~> 1.0)
-    omniauth-oauth (1.0.1)
-      oauth
-      omniauth (~> 1.0)
-=======
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
@@ -144,7 +136,6 @@ GEM
       multi_json (~> 1.3)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
->>>>>>> facebook
     omniauth-twitter (1.1.0)
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
