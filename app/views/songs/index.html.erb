@@ -30,10 +30,13 @@
 <%@songs.each do |mysong| %>
   <div class="col-md-4">
     <%=image_tag mysong.artwork %><br>
-    <div id="songname"><%=mysong.name%></div>
-    <div id="songartist"><%=mysong.artist%></div>
-    <%=mysong.album%>
-My Rating:<%= rating_for mysong, "rating" %>
+    <div><%=mysong.name%></div>
+    <div><%=mysong.artist%></div>
+    <div><%=mysong.songalbum%></div>
+    <div><%=mysong.artistid%></div>
+    <div><%=mysong.albumid%></div>
+    <div><%=mysong.songid%></div>
+  My Rating:<%= rating_for mysong, "rating" %>
 
  
     <%=form_for :song, url: rate_songs_path(mysong), method: :patch do |f| %>

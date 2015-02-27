@@ -24,7 +24,13 @@
       else
         @song=Song.new(name:     params[:name],
           artist:   params[:artist],
-          artwork:  params[:artwork])
+          artwork:  params[:artwork],
+          songalbum: params[:songalbum],
+          artistid: params[:artistid],
+          albumid: params[:albumid],
+          songid: params[:songid]
+          )
+
           @song.user=current_user
 
           if @song.save
