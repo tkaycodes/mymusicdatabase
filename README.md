@@ -10,7 +10,6 @@ it gives them the option to save these songs into their own library
 ```shell
 App features:
 -Facebook, Twitter Login Options (using Oauth)
--Credit Card Payment Processing (using Stripe)
 -Rdio API integration(used for searching Rdio Databases)
 ```
 
