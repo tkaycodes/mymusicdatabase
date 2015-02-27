@@ -5,19 +5,13 @@ module Rdio
                             consumer_secret: Rails.application.secrets.rdio_secret) 
   end
 
-
-
   def self.search(text)
     response = Rdio.client.search(query: text, types: 'song')
     response.results.map { |result| Song.new(result) }
   end
 
-
-  
-
   class Song
     attr_reader :name, :artist, :artwork, :album, :artistid, :albumid, :uid
-
     def initialize(result)
       @name =   result.name
       @artist = result.artist
@@ -28,12 +22,9 @@ module Rdio
       @artistid = result.artistKey
       @albumid = result.albumKey
       @uid = result.to_hash['key']
-
     end
-
   end
-
- end
+end
 
  # Rdio::Song
 

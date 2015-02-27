@@ -1,49 +1,36 @@
 <!-- API SEARCH RESULTS PAGE (DISPLAY RESULTS AS RDIO::SONG OBJECTS) -->
-
-
 <!-- TODO: CSS FLIP EFFECT  -->
-
 <!-- background image -->
 <style>
-body
-{ background-color:#162955;
-}
+  body { background-color:#162955;
+  }
 </style>
-
 <%#=render plain: params[:usersearch]%>
 <%=link_to "Go back home", root_path%>
 <h1>Results</h1>
-
-
-
-
 <!-- all api results(rdio::song objects) -->
-
-
-
-<%if @result.present? %>
-  <%@result.each do |x|%>
-
+  <%if @result.present? %>
+    <%@result.each do |x|%>
       <div class="col-md-4">
-      <%=image_tag x.artwork %><br>
-      <div id="songname"><%=x.name%></div>
-      <div id="songartist"><%=x.artist%></div>
-      <div id="otherinfo">Other info:"</div>
-       <div id="songalbum">albumname:<%=x.album%></div>
-       <div id="songid">Songid:<%=x.uid%></div>
-       <div id="artistid">artistid:<%=x.artistid%></div>
-       <div id="albumid">albumid:<%=x.albumid%></div>
-      <%#=x.songid%>
-      <%#=x.songid%>
-      <!-- convert song to SONG model object -->
-      <%=link_to "Add this Song to my Collection", 
-      songs_path(:name => x.name, :artist => x.artist, 
-      :artwork => x.artwork),method: :post%>
+        <%=image_tag x.artwork %><br>
+        <div id="songname"><%=x.name%></div>
+        <div id="songartist"><%=x.artist%></div>
+        <div id="otherinfo">Other info:"</div>
+        <div id="songalbum">albumname:<%=x.album%></div>
+        <div id="songid">Songid:<%=x.uid%></div>
+        <div id="artistid">artistid:<%=x.artistid%></div>
+        <div id="albumid">albumid:<%=x.albumid%></div>
+        <%#=x.songid%>
+        <%#=x.songid%>
+        <!-- convert song to SONG model object -->
+        <%=link_to "Add this Song to my Collection", 
+        songs_path(:name => x.name, :artist => x.artist, 
+        :artwork => x.artwork),method: :post%>
       </div>
+    <%end%>
+  <%else%>
+    <%="Sorry, no results matched that search"%>
   <%end%>
-<%else%>
-<%="Sorry, no results matched that search"%>
-<%end%>
 
 
 

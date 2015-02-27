@@ -1,14 +1,9 @@
 Listing
-
 <%=link_to "search for more", search_path %>
-
 <hr>
-
-
 <!--###########my collection search / list view / other actions################# -->
-
 <div class="inlinedivs">
-<h2> <%=current_user.name%>'s Database </h2>
+  <h2> <%=current_user.name%>'s Database </h2>
 </div>
 <div class="inlinedivs">
   <%=form_tag("/songs", method: "get") do %>
@@ -18,42 +13,35 @@ Listing
   <%end%>
 </div>
 <div class="inlinedivs">
-<%#= button_to "list view", action: "index" %>
-<!-- <form method="get" action="/controller/index2.html.erb" class="button_to"></form> -->
-<%=link_to "view as thumbnails", songs_path%>
-<%#=render :partial => "index2" %>
+  <%#= button_to "list view", action: "index" %>
+  <!-- <form method="get" action="/controller/index2.html.erb" class="button_to"></form> -->
+  <%=link_to "view as thumbnails", songs_path%>
+  <%#=render :partial => "index2" %>
 </div>
 <hr>
-
-
 <!-- #########################my collection display (list view)########################## -->
-
 <table class="table">
   <tr>
-
-        <th>name</th>
-        <th>artist</th>
-        <th>album</th>
-        <th>length</th>
-        <th>year</th>
-        <th>rating</th>
-        <th colspan="4"></th>
-     </tr>
-     <hr>
- 
-<%@songs.each do |mysong| %>
-<tr>
-<td><%=mysong.name%></td>
-<td><%=mysong.artist%></td>
-<td><%#=mysong.album%></td>
-<td>"dsf"</td>
-<td>"dsaf"</td>
-<td>"fdf"</td>
-</tr> 
-
-
-      <% end %>
-      </table>
-      <hr>
+    <th>name</th>
+    <th>artist</th>
+    <th>album</th>
+    <th>length</th>
+    <th>year</th>
+    <th>rating</th>
+    <th colspan="4"></th>
+  </tr>
+  <hr>
+  <%@songs.each do |mysong| %>
+    <tr>
+      <td><%=mysong.name%></td>
+      <td><%=mysong.artist%></td>
+      <td><%#=mysong.album%></td>
+      <td>"dsf"</td>
+      <td>"dsaf"</td>
+      <td>"fdf"</td>
+    </tr> 
+  <% end %>
+</table>
+<hr>
 
 

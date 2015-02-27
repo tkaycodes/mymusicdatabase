@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   has_many :songs
 
   serialize :twitter_omniauth_data
-
   serialize :facebook_omniauth_data
 
   def email_required?
@@ -17,7 +16,6 @@ class User < ActiveRecord::Base
   def password_required?
     provider.nil?
   end
-
 
   def self.find_or_create_from_twitter(twitter_omniauth_data)
     user = User.where(provider: :twitter, uid: twitter_omniauth_data["uid"]).first
@@ -42,11 +40,9 @@ class User < ActiveRecord::Base
                       facebook_credentials_token: facebook_omniauth_data["credentials"]["token"],
                       facebook_credentials_expires_at: facebook_omniauth_data["credentials"]["expires_at"],
                       omniauth_raw_data: facebook_omniauth_data)
-     end
+    end
     user
   end
-
-        
 
   ratyrate_rater
 
@@ -59,8 +55,5 @@ class User < ActiveRecord::Base
       0.0
     end
   end
-
-
-
 
 end

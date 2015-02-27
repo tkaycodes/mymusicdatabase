@@ -1,11 +1,9 @@
 <%=link_to "search for more", search_path %>
 <hr>
-
-
 <!--###########my collection search / list view / other actions################# -->
-
 <div class="inlinedivs">
-<h2> <%=current_user.name%>'s Database </h2>
+  <h2><%=current_user.name%>'s Database 
+  </h2>
 </div>
 <div class="inlinedivs">
   <%=form_tag("/songs", method: "get") do %>
@@ -15,32 +13,27 @@
   <%end%>
 </div>
 <div class="inlinedivs">
-<%#= button_to "list view", action: "index" %>
-<!-- <form method="get" action="/controller/index2.html.erb" class="button_to"></form> -->
-
-<%= link_to "View as List", songs_path(listing: true) %>
-<%#=link_to "list view", "/songs"%>
-<%#=render :partial => "index2" %>
+  <%#= button_to "list view", action: "index" %>
+  <!-- <form method="get" action="/controller/index2.html.erb" class="button_to"></form> -->
+  <%= link_to "View as List", songs_path(listing: true) %>
+  <%#=link_to "list view", "/songs"%>
+  <%#=render :partial => "index2" %>
 </div>
 <hr>
-
-
 <!-- #########################my collection display(thumbnails)########################## -->
-
 <%@songs.each do |mysong| %>
   <div class="col-md-4">
     <%=image_tag mysong.artwork %><br>
-    <div id="songname"><%=mysong.name%></div>
-    <div id="songartist"><%=mysong.artist%></div>
+    <div id="songname"><%=mysong.name%>
+    </div>
+    <div id="songartist"><%=mysong.artist%>
+    </div>
     <%#=mysong.album%>
-My Rating:<%= rating_for mysong, "rating" %>
-
- 
+    My Rating:<%= rating_for mysong, "rating" %>
     <%=form_for :song, url: rate_songs_path(mysong), method: :patch do |f| %>
     <%= f.number_field :rating, min:0, max:5 %>
     <%= f.submit "submit" %>
     <%end%> 
-
     MY RATING:<%=mysong.rating%><br>
     <%=link_to "Remove from my collection", delete_songs_path(mysong), 
     method: :delete, data:{confirm: "are you sure?"} %>

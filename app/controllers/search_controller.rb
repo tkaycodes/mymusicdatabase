@@ -1,6 +1,4 @@
 class SearchController < ApplicationController
-
-
   def index#searchform (search box only)
   end
 
@@ -12,7 +10,6 @@ class SearchController < ApplicationController
     # render plain: params[:usersearch]
     # render plain: @usersearch;
   end
-  
 end
 
 # @client = Rdio.client
