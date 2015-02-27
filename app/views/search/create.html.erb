@@ -12,13 +12,15 @@ body
 
 <%#=render plain: params[:usersearch]%>
 <%=link_to "Go back home", root_path%>
-<h1>Results</h1>
 
 
 
 
 <!-- all api results(rdio::song objects) -->
 
+<div class="container">
+  <h1 id="results_title">Results</h1>
+  <hr>
 
 
 <%if @result.present? %>
@@ -28,9 +30,9 @@ body
       <%=image_tag x.artwork %><br>
       <div id="songname"><%=x.name%></div>
       <div id="songartist"><%=x.artist%></div>
-      <div id="otherinfo">Other info:"</div>
+      <div id="otherinfo">Other info:</div>
        <div id="songalbum">albumname:<%=x.album%></div>
-       <div id="songid">Songid:<%=x.uid%></div>
+       <div id="songid">Songid:<%=x.songid%></div>
        <div id="artistid">artistid:<%=x.artistid%></div>
        <div id="albumid">albumid:<%=x.albumid%></div>
       <%#=x.songid%>
@@ -44,6 +46,8 @@ body
 <%else%>
 <%="Sorry, no results matched that search"%>
 <%end%>
+
+</div>
 
 
 
