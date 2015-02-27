@@ -16,7 +16,7 @@ module Rdio
   
 
   class Song
-    attr_reader :name, :artist, :artwork, :album, :uid
+    attr_reader :name, :artist, :artwork, :album, :artistid, :albumid, :uid
 
     def initialize(result)
       @name =   result.name
@@ -27,8 +27,8 @@ module Rdio
       ### stat attr
       @artistid = result.artistKey
       @albumid = result.albumKey
-
       @uid = result.to_hash['key']
+
     end
 
   end
