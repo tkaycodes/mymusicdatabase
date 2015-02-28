@@ -27,12 +27,18 @@
           <%#=link_to "My database", "/songs"%>
           <%=link_to 'Logout',destroy_user_session_path,:method =>:delete %>
         <%else%> 
+          
           <span class="loginstuff">
             <i class="fa fa-user fa-2x"></i>
+
             <%=link_to 'LOGIN',new_user_session_path%>
             <%=link_to 'twitter login',user_omniauth_authorize_path(provider: :twitter)%>
             <%=link_to 'facebook login', user_omniauth_authorize_path(provider: :facebook)%>
+
+
           </span>
+
+          
     <%end%>
 
     <p class="notice"><%= notice %></p>
