@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :songs
+  has_many :songs, dependent: :destroy
 
   serialize :twitter_omniauth_data
 
