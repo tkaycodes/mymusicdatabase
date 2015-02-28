@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.loginstuff {
+  display: block;
+  margin-top: -30px;
+}

@@ -30,12 +30,12 @@
 <%@songs.each do |mysong| %>
   <div class="col-md-4">
     <%=image_tag mysong.artwork %><br>
-    <div><%=mysong.name%></div>
-    <div><%=mysong.artist%></div>
-    <div><%=mysong.songalbum%></div>
-    <div><%=mysong.artistid%></div>
-    <div><%=mysong.albumid%></div>
-    <div><%=mysong.songid%></div>
+    <div>SONGNAME:<%=mysong.name%></div>
+    <div>SONGARTIST:<%=mysong.artist%></div>
+    <div>SONGALBUM:<%=mysong.songalbum%></div>
+    <div>ARTISTID:<%=mysong.artistid%></div>
+    <div>ALBUMID:<%=mysong.albumid%></div>
+    <div>SONGID:<%=mysong.songid%></div>
   My Rating:<%= rating_for mysong, "rating" %>
 
  
