@@ -8,8 +8,9 @@
 /.bundle
 /config/initializers/atwitter_vars.rb
 /config/initializers/afacebook_vars.rb
-
+/config/initializers/stripe.rb
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
+.env
