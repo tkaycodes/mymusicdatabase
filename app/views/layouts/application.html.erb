@@ -5,26 +5,24 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <!-- Google font-->
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
-  <!--Font Awesome (icons) -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <!-- <nav class="navbar navbar-inverse"> -->
-  <nav class="navbar-default">
-  <!-- <%#=image_tag 'mmdb.png', id: "mylogo"%>&nbsp;&nbsp;&nbsp; -->
-    <span id="navbarname">mymusicdatabase.
-    </span>
-    <span><%=link_to "top songs", ""%>
-          <%=link_to "top artists", ""%>
-          <%=link_to "top albums", ""%>
-    </span>
-    <span id="userauth">
-    <% if user_signed_in? %>
+
+
+<!-- Google font-->
+<link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+
+<!--Font Awesome (icons) -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<!-- <nav class="navbar navbar-inverse"> -->
+<nav class="navbar-default">
+<!-- <%#=image_tag 'mmdb.png', id: "mylogo"%>&nbsp;&nbsp;&nbsp; -->
+  <span id="navbarname">mymusicdatabase.</span>
+
+  <span id="userauth">
+  <% if user_signed_in? %>
       Hi <%=current_user.name%>
-        <%if current_user.omniauth_raw_data.present?%>
-          <%#=image_tag current_user.omniauth_raw_data["info"]["image"]%>
-          <%=current_user.omniauth_raw_data["info"]["description"]%>
-          <%#='heello'%>
+        <%if current_user.profile_image_url.present? %>
+          <%= image_tag current_user.profile_image_url %>
         <%end%>
           <%#=link_to "My database", "/songs"%>
           <%=link_to 'Logout',destroy_user_session_path,:method =>:delete %>
