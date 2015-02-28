@@ -17,11 +17,7 @@
 <nav class="navbar-default">
 <!-- <%#=image_tag 'mmdb.png', id: "mylogo"%>&nbsp;&nbsp;&nbsp; -->
   <span id="navbarname">mymusicdatabase.</span>
-  |
-  <span><%=link_to "top songs", ""%>
-  <%=link_to "top artists", ""%>
-  <%=link_to "top albums", ""%>
-</span>
+
   <span id="userauth">
   <% if user_signed_in? %>
       Hi <%=current_user.name%>

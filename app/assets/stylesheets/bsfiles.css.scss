@@ -10,6 +10,19 @@
 //app wide //////////////////////////////////////////////////////
 
 
+
+#results_title{
+  color:white;
+  text-align: center;
+}
+
+#sidebar{
+// height:100vh;
+// width:50px;
+// margin-right:0px;
+
+}
+
 #mainpagetho{
   background-image: url('albumcovers.jpg');
   width:100%;
@@ -17,15 +30,18 @@
 
 }
 
+#searchimage{
+ // margin-left:10px;
+ // vertical-align: center;
+ // margin: 10px, 10px, 10px, 10px;
+}
+
 #listimage{
   width:5px;
   height:5px;
 }
 
-#results_title{
-  color:white;
-  text-align: center;
-}
+
 
 #mainpage2{
   background-color: #162955;
@@ -58,14 +74,15 @@ color:white;
   color:white;
 }
 
-.inlinedivs{
+// .inlinedivs{
 
-  display:inline-block;
-}
+//   display:inline-block;
+// }
 
-.inlinedivs2{
-  float:right;
-}
+// .inlinedivs2{
+//   float:right;
+// }
+
 .navbar{
 // background-color: #000000; opacity: 0.8; filter: alpha(opacity=50);
 border-radius: 0 !important;
@@ -77,8 +94,8 @@ margin-bottom:0px;
 font-weight:900;
 font-size:40px;
 color:#162955;
-border-color:gray;
-border-style:solid;
+// border-color:gray;
+// border-style:solid;
 }
 
 #backgroundimage{
@@ -196,6 +213,12 @@ background-color: #000000; opacity: 0.9; filter: alpha(opacity=50);
   padding:0px
 }
 
+
+
+
+
+
+///////////////////SEARCH PAGE INDEX ////////////////////////////////////////////
  #searchpagemaindiv{
    height:100vh;
    width:100%;
@@ -233,8 +256,10 @@ font-size:75px;
 font-family: 'Lato', sans-serif;
 font-weight:900;
 position:absolute;
-margin-left: 520px;
-margin-top:150px;
+top:30%;
+left:30%;
+// margin-left: 520px;
+// margin-top:150px;
 
 }
 
@@ -413,6 +438,10 @@ color:white;
 
 }
 
+#songrating{
+  color:white;
+}
+
 #otherinfo{
   color:white;
 }
@@ -447,6 +476,14 @@ color:white;
 
 
 
+
+
+
+//my songs index page
+
+#usercollection{
+  color:white;
+}
 
 
 

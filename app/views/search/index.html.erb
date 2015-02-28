@@ -1,8 +1,17 @@
 <!--################### SEARCH API PAGE ###################-->
 
-<% if user_signed_in? %>
-  <%=link_to "My database", "/songs"%>
-<%end%>
+<%# if user_signed_in? %>
+  <%#=link_to "My database", "/songs"%>
+<%#end%>
+
+
+<span id="sidebar">
+  <%=link_to "Go back home", root_path%><br>
+  <%=link_to "my collection", songs_path%><br><br><br><br><br>
+  <%=link_to "top songs", ""%><br>
+  <%=link_to "top artists", ""%><br>
+  <%=link_to "top albums", ""%><br>
+</span>
 
 <!--################### SEARCH BAR ###################-->
 
@@ -79,13 +88,7 @@ body
               <div class="col-md-4">
                 
               </div>
-              <div class="col-md-4">
-                <%=link_to "my database", "" %>
-                |
-                <%=link_to "homepage", root_path %>
-                |
-                <%=link_to "third link", "" %>
-              </div>
+              
               <div class="col-md-4">
                 
               </div>         
