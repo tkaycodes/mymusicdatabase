@@ -34,13 +34,12 @@ class SongsController < ApplicationController
           @song.user=current_user
 
           if @song.save
-          redirect_to add_to_my_songs_path, notice: "song added"
+            redirect_to add_to_my_songs_path, notice: "song added"
           else 
-          redirect_to search_path, notice: "something went wrong"
+            redirect_to search_path, notice: "something went wrong"
           end
       end
     end
-  end
 
   def update
     @song=Song.find(params[:id])
