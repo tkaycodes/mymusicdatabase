@@ -28,14 +28,17 @@ Listing
 
 <!-- #########################my collection display (list view)########################## -->
 
+<div class="container">
+
 <table class="table">
   <tr>
-
+        <th></th>
         <th>name</th>
         <th>artist</th>
         <th>album</th>
-        <th>length</th>
-        <th>year</th>
+        <th>artistid</th>
+        <th>albumid</th>
+        <th>songid</th>
         <th>rating</th>
         <th colspan="4"></th>
      </tr>
@@ -43,17 +46,25 @@ Listing
  
 <%@songs.each do |mysong| %>
 <tr>
+<td><div id="listimage"><%=image_tag mysong.artwork%></div></td>
 <td><%=mysong.name%></td>
 <td><%=mysong.artist%></td>
-<td><%#=mysong.album%></td>
-<td>"dsf"</td>
-<td>"dsaf"</td>
-<td>"fdf"</td>
+<td><%=mysong.songalbum%></td>
+<td><%=mysong.artistid%></td>
+<td><%=mysong.albumid%></td>
+<td><%=mysong.songid%></td>
+<td>"rating goes here"</td>
 </tr> 
 
 
       <% end %>
       </table>
       <hr>
+
+    </div>
+
+
+
+
 
 
