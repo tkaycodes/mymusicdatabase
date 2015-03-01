@@ -1,12 +1,27 @@
-<%= form_tag charges_path do %>
-  <article>
-    <label class="amount">
-      <span>Amount: $2.00</span>
-    </label>
-  </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= ENV["STRIPE_PUBLIC_KEY"] %>"
-          data-description="Donate"
-          data-amount="200"></script>
-<% end %>
+
+<div class="container" id="paymentpage">
+    <%= form_tag charges_path do %>
+      <label class="amount">
+      <!-- <span>Amount: $2.00</span><br> -->
+      <input name="customamount" placeholder="Enter amount"></input>
+      </label>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= ENV["STRIPE_PUBLIC_KEY"] %>"
+        data-description="Donate"
+        data-amount="customamount">
+      </script>
+   <%end%>
+</div>
+<!-- 
+<div id="paymentpagecompanies">
+fdsafsaf
+ds
+fads
+f
+</div> -->
+
+
+<div class="thumbnail">
+<%= image_tag("paidcompanies.png") %>
+</div>
