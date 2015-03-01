@@ -1,9 +1,14 @@
 module Rdio
   
-  def self.client
-    @client ||= RdioApi.new(consumer_key: Rails.application.secrets.rdio_key,
-                            consumer_secret: Rails.application.secrets.rdio_secret) 
-  end
+  # def self.client
+  #   @client ||= RdioApi.new(consumer_key: Rails.application.secrets.rdio_key,
+  #                           consumer_secret: Rails.application.secrets.rdio_secret) 
+  # end
+
+     def self.client
+     @client ||= RdioApi.new(consumer_key: "49hav4bae3jttacpk3vmtu42",
+                             consumer_secret: "yx5VGpBx4B") 
+    end
 
   def self.search(text)
     response = Rdio.client.search(query: text, types: 'song')

@@ -9,6 +9,14 @@ class User < ActiveRecord::Base
   serialize :twitter_omniauth_data
   serialize :facebook_omniauth_data
 
+
+  # def add_hello_to_user(user)
+  #   user.name="hello"
+  #   user.email=user.email
+  #   user.password=user.password
+  #   user.save
+  # end
+
   def omniauth_data
     if omniauth_raw_data?
      # Assumes that omniauth_raw_data is safe to eval!
