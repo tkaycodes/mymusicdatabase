@@ -1,84 +1,25 @@
-<!--################### SEARCH API PAGE ###################-->
-<%# if user_signed_in? %>
-  <%#=link_to "My database", "/songs"%>
-<%#end%>
-
-
-<span id="sidebar">
-  <%=link_to "Go back home", root_path%><br>
-  <%=link_to "my collection", songs_path%><br><br><br><br><br>
-  <%=link_to "top songs", ""%><br>
-  <%=link_to "top artists", ""%><br>
-  <%=link_to "top albums", ""%><br>
-</span>
-
-<!--################### SEARCH BAR ###################-->
-<!-- <div id="searchpagemaindiv"> -->
-<!-- <div class="searchdiv"> -->
-<!-- <div class="container well"> -->
-  <%#=form_tag url: submit_search_path, method: :post do%>
-  <!--   <div id="searchstuff"> 
-     <input type="text" class="searchbox" placeholder="Song Search.." 
-     name="usersearch" required/> 
-     <i class="fa fa-search fa-2x"></i>
-     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-     </span> -->
-      <%#end%>
-<style>
-  body { background-color:black;
-  }
-</style>
-<!-- </div> -->
-<!-- </div> -->
-<!-- <div> -->
-<!-- <div class="input-group">
-  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-  <input class="form-control" type="password" placeholder="Password">
+<div id="mainpagetho">
+  <%= form_tag url: submit_search_path, method: :post do %>
+        <input type="text" name="usersearch" class="form-control" placeholder="song search.." 
+         required/>
+    <%end%>
 </div>
--->
-<!-- <div id="searchpagemaindiv">  -->
-<!-- <div id="searchimage"></div> -->
-<div class="row">
-  <div class="col-md-4">
-  </div>
-  <div class="col-md-4 center" id="searchtext">
-    SEARCH ENGINE
-  </div>
-  <div class="col-md-4">
+    
+<div id="mainpage2">
+  <i class="fa fa-refresh fa-spin fa-5x"></i>  
+  <i class="fa fa-flag fa-5x"></i>
+  <i class="fa fa-music fa-5x"></i>
+    <div class="container">
+      <h5 id="heading2">.My music database allows you to search through millions of songsand upload them to ur very own music library.
+      <br> Get started now!
+      </h5>
+    </div>
+</div>
+<div id="mainpage3">
+  <div class="container"> 
+    <i class= "fa fa-quote-left fa-3x pull-left fa-border"></i>
+    <h5 id="heading3"> store all your music preferences in one place.
+    </h5>
   </div>
 </div>
-<%= form_tag url: submit_search_path, method: :post do %>
-  <div class="input-group">
-    <input type="text" name="usersearch" class="form-control" 
-    placeholder="Song Search..." 
-    aria-describedby="basic-addon2" required/>
-    <span class="input-group-addon">
-      <i class="fa fa-search fa-2x">
-      </i>
-    </span>
-  </div>
-<%end%>
-    <!-- <div id="searchimage2"></div> -->
-      <div id="onlyheadphones"></div>
-          <div class="row">
-            <div id="options">
-              <div class="center">
-              <div class="col-md-4">
-                
-              </div>
-              
-              <div class="col-md-4">
-                
-              </div>         
-            </div>
-          </div>
-        </div>
-<!-- </div> -->
-<%#=form_tag url: submit_search_path, method: :post do%>
-<!--     <div id="searchstuff"> 
-     <input type="text" class="searchbox" placeholder="Song Search.." 
-     name="usersearch" required/> 
-     <i class="fa fa-search fa-2x"></i>
-     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-     </span> -->
-      <%#end%>
+<%= link_to "Donate", new_charge_path %>
