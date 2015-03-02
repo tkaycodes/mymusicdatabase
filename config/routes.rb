@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :charges
+
+  resources :trending, only: :index
   
   get '/search', to:'search#index' 
   post '/search', to: 'search#create', as: 'submit_search'

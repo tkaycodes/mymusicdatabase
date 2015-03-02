@@ -1,0 +1,62 @@
+<h1>#WhatsTrending?<h1><br><hr>
+
+<!-- works -->
+<%#@songs.each do |song| %>
+  <%#=song.name%>
+<%#end%>
+
+<!-- works -->
+<%#=@songs.group(:songid).count%>
+
+
+<!-- works -->
+<%#=all_counts = @songs.group(:songid).count%>
+<%#=all_counts.max%>
+<hr>
+
+Trending Songs
+<hr>
+
+<%all_counts = @songs.group(:songid).count%>
+<!-- <br><br> "the highest value is:" -->
+<%#=maxvalue = all_counts.max%>
+<%all_counts.each do |x,y|%>
+  <%if y == all_counts.values.max%>
+  songid:<%=songkeys=x%>,
+  song name:<%=songname=@songs.find_by(songid: songkeys).name%><br>
+  <%=image_tag songartwork = @songs.find_by(songid: songkeys).artwork%>
+  number of collections this song is included in: <%=y%><br><hr>
+  <%end%>
+  <%end%>
+<hr><br><br><br><br>
+
+<!-- Trending Albums -->
+<%#all_album_counts = @songs.group(:albumid).count%>
+<!-- <br><br> "the highest value is:" -->
+<%#=maxvalue = all_counts.max%>
+<%#all_album_counts.each do |x,y|%>
+  <%#if y == all_album_counts.values.max%>
+  <!-- albumid:<%#=albumkeys=x%>, -->
+  <!-- album name:<%#=songname=@songs.find_by(albumid: albumkeys).name%><br> -->
+  <%#=image_tag songartwork = @songs.find_by(albumid: albumkeys).artwork%>
+  <!-- number of collections this song is included in: <%#=y%><br><hr> -->
+  <%#end%>
+  <%#end%>
+<!-- <hr> -->
+
+<!-- Trending Artists -->
+<%#=song = @songs.find_by(name:'Random')%>
+<%#=song.artist%>
+
+<!-- user = User.find_by(name: 'David') -->
+
+
+<!-- Hash[all_counts.select{ |k, v| v == max} ] -->
+
+<%#=@songs.where(songid: :songid)%>
+
+<%#=all_counts.each {|k,v| puts k if v == all_counts.values.max } %>
+
+
+<!-- max = my_hash.values.max
+Hash[my_hash.select { |k, v| v == max}] -->
