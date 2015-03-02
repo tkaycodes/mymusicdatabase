@@ -2,14 +2,14 @@ Rails.application.routes.draw do
 
   devise_for :users,
     controllers: {omniauth_callbacks:"users/omniauth_callbacks"}
-  root 'home#index'
+  root 'search#index'
 
   resources :charges
 
   resources :trending, only: :index
   
-  get '/search', to:'search#index' 
-  post '/search', to: 'search#create', as: 'submit_search'
+  get '/', to:'search#index' 
+  post '/', to: 'search#create', as: 'submit_search'
 
   get '/songs', to: 'songs#index'
   post '/songs', to: 'songs#create', as: 'add_to_my_songs'
