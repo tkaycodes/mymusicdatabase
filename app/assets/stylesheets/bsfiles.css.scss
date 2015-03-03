@@ -12,6 +12,7 @@
   height:100vh;
 }
 
+//slidebar ////////////////////////////////////
 #slideinmenu{
   width: 240px;
   height:100%;
@@ -33,6 +34,22 @@
 #menuToggle:checked ~ #slideinmenu {
   position: absolute; left:0;
 }
+
+#donationthumbnail{
+// background-image: url('paidcompanies.png'), 'max-width:100%, max-height:100%';
+ width:100%;
+ height:100vh;
+ // <image src:"paidcompanies.png"></image>;
+// height:100%;
+content: url('paidcompanies.png');
+
+}
+
+
+#menuToggle:checked ~ #donationthumbnail{
+
+}
+///////////////////////////////////////////////
 
 #twitterbtn{
   width:200px;
