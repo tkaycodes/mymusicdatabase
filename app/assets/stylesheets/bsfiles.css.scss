@@ -20,9 +20,9 @@
   background : gray;
   left: -240px;
   -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -ms-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
 
 
 }
@@ -42,11 +42,20 @@
  // <image src:"paidcompanies.png"></image>;
 // height:100%;
 content: url('paidcompanies.png');
+// position:relative; left: 0;
+margin-left:0px;
 
 }
 
 
 #menuToggle:checked ~ #donationthumbnail{
+  // position: absolute; left:0;
+  // position: absolute;
+  position: absolute; margin-left:240px;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
 
 }
 ///////////////////////////////////////////////
