@@ -12,6 +12,38 @@
   height:100vh;
 }
 
+#slideinmenu{
+  width: 240px;
+  height:100%;
+  position: absolute;
+  background : gray;
+  left: -240px;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+
+
+}
+
+#menu-icon{
+  cursor:pointer;
+}
+
+#menuToggle:checked ~ #slideinmenu {
+  position: absolute; left:0;
+}
+
+#twitterbtn{
+  width:200px;
+  height:40px;
+}
+
+#facebookbtn{
+  width:200px;
+  height:40px;
+}
+
 .main-two {
   background-image: url('albumcovers.jpg');
   width:100%;

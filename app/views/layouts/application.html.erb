@@ -31,9 +31,9 @@
           <span class="loginstuff">
             <i class="fa fa-user fa-2x"></i>
 
-            <%=link_to 'LOGIN',new_user_session_path%>
-            <%=link_to 'twitter login',user_omniauth_authorize_path(provider: :twitter)%>
-            <%=link_to 'facebook login', user_omniauth_authorize_path(provider: :facebook)%>
+      <%=link_to 'LOGIN',new_user_session_path%>
+    <%=link_to image_tag('twitterbtn.jpg', :id => 'twitterbtn'), user_omniauth_authorize_path(provider: :twitter)%>
+    <%=link_to image_tag('fbbtn.jpg', :id => 'facebookbtn'), user_omniauth_authorize_path(provider: :facebook)%>
 
 
           </span>
